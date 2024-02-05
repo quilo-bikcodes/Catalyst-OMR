@@ -8,7 +8,6 @@ for (let i = 1; i <= 100; i++) {
   qNosRight.appendChild(button);
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     // Ask the user whether to clear local storage on each refresh
     const shouldClearLocalStorage = confirm("Do you want to clear local storage on each refresh?");
@@ -91,4 +90,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
