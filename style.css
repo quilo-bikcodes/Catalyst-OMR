@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap");
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("img/bg-cat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure the body takes up the full height of the viewport */
+  overflow: hidden; 
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.app-name {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5%;
+}
+
+.app-name h1 {
+  color: white;
+  font-family: "Signika", sans-serif;
+  font-size: 45px;
+  transform: translateY(7px);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+  /* margin-top: 2% ; */
+  width: 100%;
+}
+
+.left-card {
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  width: 46.5%;
+  margin-right: 1.2%;
+  border-radius: 1%;
+}
+
+.right-cards {
+  height: 90%;
+  display: flex;
+  width: 46.5%;
+  margin-left: 1.2%;
+  flex-direction: column;
+}
+
+.right-card-up {
+  height: 60%;
+  width: 100%;
+  margin-bottom: 1.5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+
+  border-radius: 1%;
+  overflow-y: auto; 
+}
+.q-nos-card-container {
+  /* height: 90%; */
+  padding: 3%;
+  overflow-y: auto;
+  
+
+}
+
+.right-card-down {
+  height: 37%;
+  width: 100%;
+  margin-top: 1.5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1%;
+}
+
+.rounded-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  margin: 1%;
+  width: 25%;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rounded-button:hover {
+  background-color: #333;
+}
+
+.rounded-q-no {
+  display: inline-block;
+  /* padding: 10px 20px; */
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.rounded-q-no:hover {
+  background-color: #333;
+}
+
+.q-nos-right {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 10px;
+ 
+  place-content: center;
+}
+
+.q-nos-right a{
+    background-color: #064213;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+}
