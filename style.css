@@ -17,13 +17,29 @@ body {
   flex-direction: column;
 
 }
-.app-name {
+
+.title-bar {
   height: 5%;
-  width: 100%;
+  width: 95.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjusted to space between app name and timer */
+
+}
+
+.app-name {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: 1.5%; */
+  width: 80%; /* Adjusted width for centering */
+}
+
+#timer {
+  color: white;
+}
+
+.timeinput{
+  margin-top: 1%;
 }
 
 .app-name h1 {
@@ -309,6 +325,10 @@ color: white;
     }
     .app-name h1 {
       font-size: 18px;
+    }
+
+    .user-profile img{
+      visibility: hidden;
     }
 
 }

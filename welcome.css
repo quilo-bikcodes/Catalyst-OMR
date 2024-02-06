@@ -31,7 +31,7 @@
   border: 1px solid #ccc;
     
     border-radius: 8px;
-    cursor: pointer;
+    cursor:url('img/best.png')  1 1, auto;
     margin-top: 10px;
   }
   
