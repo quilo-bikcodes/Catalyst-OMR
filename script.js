@@ -110,17 +110,26 @@ document.addEventListener("DOMContentLoaded", function () {
     
         console.log(qNosButton)
 
-    options.forEach((option) => {
-      if (option !== selectedOption) {
-        option.classList.remove("selected");
+        for (let i = 1; i <= options.length; i++) {
+          localStorage.removeItem(`answer_${questionNumber}`);
       }
-    });
-
-    selectedOption.classList.toggle("selected");
+  
+      options.forEach((option) => {
+          if (option === selectedOption) {
+              option.classList.toggle("selected");
+  
+              if (option.classList.contains("selected")) {
+                  // Add the selected option to local storage
+                  const selectedAnswer = selectedOption.textContent;
+                  localStorage.setItem(`answer_${questionNumber}`, selectedAnswer);
+              }
+          } else {
+              option.classList.remove("selected");
+          }
+      });
 
     // Save the selected answer to localStorage
-    const selectedAnswer = selectedOption.textContent;
-    localStorage.setItem(`answer_${questionNumber}`, selectedAnswer);
+   
   }
 
   // Mark selected answers on page load

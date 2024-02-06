@@ -258,7 +258,8 @@ color: white;
 
 .q-nos-right.q-nos-selected {
   /* Style for selected q-nos */
-  background-color: #007bff; /* Change to the color you want */
+  background-color: #198d25; /* Change to the color you want */
+  /* background-color: #007bff; Change to the color you want */
   color: #fff; /* Change to the color you want */
 }
 
@@ -297,10 +298,5 @@ color: white;
     .app-name h1 {
       font-size: 18px;
     }
-    .container{
-      height: 90%;
-    }
-    .app-name{
-      height: 10%;
-    }
+
 }
