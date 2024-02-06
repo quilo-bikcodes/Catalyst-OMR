@@ -1,0 +1,40 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+  }
+  
+  .welcome-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-container input {
+    padding: 10px;
+    font-size: 1em;
+  }
+  
+  .welcome-container button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #000000;
+    color: #fff;
+  border: 1px solid #ccc;
+    
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .welcome-container button:hover {
+    background-color: #333;
+  }

@@ -1,6 +1,54 @@
+const isLocalStorageCleared = localStorage.length === 0;
+
+// If local storage is cleared, show the welcome page
+if (isLocalStorageCleared) {
+    const welcomeContainer = document.querySelector('.welcome-container');
+    welcomeContainer.style.display = 'flex';
+
+    // Add event listener for the "Start Quiz" button
+    // const startQuizButton = document.getElementById('startQuizButton');
+    // startQuizButton.addEventListener('click', startQuiz);
+} else {
+    // If local storage is not cleared, directly initialize the quiz
+    const numQuestions = localStorage.getItem('numQuestions');
+    if (numQuestions) {
+        initializeQuiz(parseInt(numQuestions, 10));
+    }
+}
+
+
+function startQuiz() {
+  const numQuestionsInput = document.getElementById('numQuestionsInput');
+  const numQuestions = parseInt(numQuestionsInput.value);
+
+  if (isNaN(numQuestions) || numQuestions <= 0) {
+      alert('Please enter a valid number of questions.');
+      return;
+  }
+
+  // Save the number of questions to local storage
+  localStorage.setItem('numQuestions', numQuestions);
+
+  // Initialize the quiz
+  initializeQuiz(numQuestions);
+}
+
+function initializeQuiz(numQuestions) {
+  // Hide the welcome container
+  
+  const welcomeContainer = document.querySelector('.welcome-container');
+  welcomeContainer.style.display = 'none';
+
+  // Display the quiz content as a flex container
+  const quizContent = document.getElementById('content');
+  quizContent.style.display = 'flex';
+
+  //ADD
+
+  
 const qNosRight = document.querySelector(".q-nos-right");
 
-const TOTAL_QS_NO = 250
+const TOTAL_QS_NO = numQuestions
 
 for (let i = 1; i <= TOTAL_QS_NO; i++) {
   const button = document.createElement("a");
@@ -49,7 +97,7 @@ button.addEventListener('click', function () {
 
   qNosRight.appendChild(button);
 }
-document.addEventListener("DOMContentLoaded", function () {
+
   // Ask the user whether to clear local storage on each refresh
 //   const shouldClearLocalStorage = confirm("Do you want to clear local storage on each refresh?");
 
@@ -159,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+
 
 
 const clearbtn = document.getElementById("Clear-btn");
@@ -207,7 +255,7 @@ clearbtn.addEventListener("click", () => {
       // For example, you can iterate through the questions and check the selected options
       let result = '';
   
-      for (let i = 1; i <= 100; i++) {
+      for (let i = 1; i <= TOTAL_QS_NO; i++) {
         const selectedAnswer = localStorage.getItem(`answer_${i}`);
         result += `Question ${i}: ${selectedAnswer ? `Option ${selectedAnswer}` : 'Not answered'}\n`;
       }
@@ -236,3 +284,8 @@ clearbtn.addEventListener("click", () => {
     handleOrientationAlert();
     window.addEventListener('orientationchange', handleOrientationAlert);
     window.addEventListener('resize', handleOrientationAlert);
+
+}
+
+
+

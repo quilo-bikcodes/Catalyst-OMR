@@ -4,12 +4,13 @@ body {
   font-family: Arial, sans-serif;
   background-image: url("img/bg-cat-2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 100vh; /* Ensure the body takes up the full height of the viewport */
   /* overflow: hidden; */
 }
 .content {
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -92,7 +93,7 @@ body {
 }
 
 .right-down-container{
-  height:35%;
+  height:34.8%;
   width: 100%;
   display: flex;
   
@@ -115,7 +116,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 1%;
+  border-radius: 1.5%;
 }
 
 .right-card-upload-img {
@@ -232,11 +233,22 @@ color: white;
 }
 
 .option-button.selected {
+  padding: 9px;
+
     background-color: #000000;
+  border: 1px solid #ccc;
+
+}
+.option-button.selected:hover {
+    background-color: #000000;
+    padding: 9px;
+
+  border: 1px solid #ccc;
+
 }
 
 .option-button:hover {
-    background-color: #000000;
+    background-color: rgb(14, 77, 119);
 }
 
 
@@ -300,3 +312,4 @@ color: white;
     }
 
 }
+

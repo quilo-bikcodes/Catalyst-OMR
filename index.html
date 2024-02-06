@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="welcome.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Catalyst</title>
@@ -11,7 +12,13 @@
     <div id="landscapeAlert" class="alert">
       <p>Please use in Landscape mode for the best experience.</p>
     </div>
-    <div class="content">
+    <div class="welcome-container">
+      <h1>Welcome to Your Quiz App</h1>
+      <p>Please enter the number of questions:</p>
+      <input type="number" id="numQuestionsInput" />
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <div class="content" id="content">
       <div class="app-name">
         <h1>Catalyst</h1>
       </div>
