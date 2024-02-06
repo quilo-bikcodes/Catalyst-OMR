@@ -43,7 +43,7 @@ body {
 
 .left-card {
   height: 95%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
   backdrop-filter: blur(7px);
   width: 46.5%;
   margin-right: 1.2%;
@@ -64,7 +64,9 @@ body {
   height: 60%;
   width: 100%;
   margin-bottom: 1.5%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: #f0f0f0;
+
   backdrop-filter: blur(7px);
 
   border-radius: 1%;
@@ -78,9 +80,11 @@ body {
 
 .right-card-down {
   height: 37%;
-  width: 100%;
+  width: 50%;
   margin-top: 1.5%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: #f0f0f0;
+
   backdrop-filter: blur(7px);
   display: flex;
   justify-content: center;
@@ -95,7 +99,7 @@ body {
   background-color: #000;
   color: #fff;
   margin: 1%;
-  width: 25%;
+  width: 50%;
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
@@ -124,23 +128,6 @@ body {
   background-color: #333;
 }
 
-.q-nos-right {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-  gap: 10px;
-
-  place-content: center;
-}
-
-.q-nos-right a {
-  background-color: #064213;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 25px;
-}
 
 .qs-content {
  
@@ -164,7 +151,7 @@ body {
 
 .question {
     display: grid;
-    color: white;
+    color: rgb(0, 0, 0);
     grid-template-columns: repeat(5, 1fr); /* Each question takes up a column */
     gap: 10px;
     align-items: center;
@@ -190,3 +177,26 @@ body {
 .option-button:hover {
     background-color: #000000;
 }
+
+
+.q-nos-right {
+  /* Your existing styles for q-nos buttons */
+  display: inline-block;
+  text-align: center; 
+  padding: 5px 10px;
+  margin: 5px;
+  min-width: 25px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  
+  border-radius: 5px;
+}
+
+.q-nos-right.q-nos-selected {
+  /* Style for selected q-nos */
+  background-color: #007bff; /* Change to the color you want */
+  color: #fff; /* Change to the color you want */
+}
+

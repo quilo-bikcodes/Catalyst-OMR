@@ -1,0 +1,22 @@
+  button.addEventListener('click', function () {
+    setTimeout(() => {
+      const questionDiv = document.getElementById(`question${i}`);
+      
+      console.log(questionDiv)
+      if (questionDiv) {
+        const scrollPaddingTop = 50;
+        const highlightDuration = 2000;
+        questionDiv.scrollIntoView({
+             behavior: 'smooth', 
+            //  block: 'start',
+             top: questionDiv.offsetTop - scrollPaddingTop });
+             questionDiv.style.border = '2px solid red'; // Adjust the border style as needed
+  
+             // Reset the border after the highlight duration
+             setTimeout(() => {
+               questionDiv.style.border = 'none';
+             }, highlightDuration);
+      }
+    }, 100); // Adjust the delay if needed
+    questionDiv.classList.add("found");
+  });
