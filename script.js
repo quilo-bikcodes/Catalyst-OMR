@@ -208,3 +208,22 @@ clearbtn.addEventListener("click", () => {
 
 
 
+    function isLandscape() {
+      return window.innerWidth > window.innerHeight;
+    }
+    
+    // Function to show or hide the alert based on the orientation
+    function handleOrientationAlert() {
+      const landscapeAlert = document.getElementById('landscapeAlert');
+    
+      if (!isLandscape()) {
+        landscapeAlert.style.display = 'block';
+      } else {
+        landscapeAlert.style.display = 'none';
+      }
+    }
+    
+    // Initial check and event listener for orientation change
+    handleOrientationAlert();
+    window.addEventListener('orientationchange', handleOrientationAlert);
+    window.addEventListener('resize', handleOrientationAlert);

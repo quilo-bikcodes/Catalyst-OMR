@@ -200,3 +200,21 @@ body {
   color: #fff; /* Change to the color you want */
 }
 
+.alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffcccb; /* Light red color, adjust as needed */
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Add media query for landscape mode */
+@media only screen and (orientation: portrait) {
+  .alert {
+    display: block;
+  }
+}
