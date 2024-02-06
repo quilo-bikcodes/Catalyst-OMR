@@ -1,6 +1,6 @@
 const qNosRight = document.querySelector(".q-nos-right");
 
-const TOTAL_QS_NO = 50
+const TOTAL_QS_NO = 250
 
 for (let i = 1; i <= TOTAL_QS_NO; i++) {
   const button = document.createElement("a");
