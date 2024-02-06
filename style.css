@@ -93,7 +93,7 @@ body {
 
 .right-card-down {
   height: 37%;
-  width: 100%;
+  width: 50%;
   margin-top: 1.5%;
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -122,6 +122,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 1px solid #ccc;
+
 }
 
 .rounded-button:hover {
