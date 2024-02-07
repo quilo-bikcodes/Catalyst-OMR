@@ -317,7 +317,8 @@ function initializeQuiz(numQuestions) {
     photoInput.click();
   });
   const uploadedPic = document.getElementById("upload-placeholder");
-  const uploadInputText = document.getElementById("uploadInputText");
+  const uploadInputTextM = document.getElementById("uploadInputText-M");
+  const uploadInputTextPC = document.getElementById("uploadInputText-PC");
 
   photoInput.addEventListener("change", function () {
     // Handle selected photo
@@ -328,9 +329,55 @@ function initializeQuiz(numQuestions) {
       console.log("Selected photo:", selectedPhoto.name);
       uploadedPic.src = photoURL;
       uploadedPic.style.filter = 'invert(0%)';
-      uploadInputText.innerText="File Saved \nTap again to Reupload";
+      // uploadInputTextM.innerText="File Saved \nTap again to Reupload";
+      // uploadInputTextPC.innerText="File Saved \nClick again to Reupload";
+      uploadInputTextM.innerText="Feature Coming Soon";
+      uploadInputTextPC.innerText="Feature Coming Soon";
+      // imageToText(photoURL);
 
     }
     
   });
 }
+
+
+
+// Function to perform OCR using Tesseract.js
+// async function imageToText(imageUrl) {
+//   try {
+//       if (!imageUrl) {
+//           throw new Error('Image URL is missing.');
+//       }
+
+//       // Load the image using Tesseract.js
+//       const result = await Tesseract.recognize(
+//           imageUrl,
+//           'eng',
+//           {
+//               logger: info => console.log(info) // Log progress information
+//           }
+//       );
+
+//       console.log('Tesseract Result:', result);
+
+//       if (!result || !result.data || !result.data.text) {
+//           throw new Error('No text found in the image.');
+//       }
+
+//       // Extracted text
+//       const extractedText = result.data.text.trim();
+
+//       // Log the extracted text
+//       console.log('Extracted Text:', extractedText);
+
+//       return extractedText;
+//   } catch (error) {
+//       console.error('Error:', error.message || error);
+//       throw new Error('Error processing image.');
+//   }
+// }
+
+// // Example usage
+// const imageUrl = 'https://source.unsplash.com/user/c_v_r/1900x800'; // Replace with the actual URL of the image
+// imageToText(imageUrl);
+

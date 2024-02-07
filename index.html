@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="welcome.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js"></script>
     <title>Catalyst</title>
   </head>
   <body>
@@ -14,18 +15,20 @@
     </div>
     <div class="welcome-container">
       <h1>Welcome to Catalyst: Your Quiz App</h1>
-      <!-- <h3>Mark and check your questions and</h3> -->
+      <h4>
+        [USE OPERA MOBILE (not sponsered) VERSION AND USE FULL SCREEN MODE FOR
+        BEST EXP]
+      </h4>
       <p>Please enter the number of questions you want to do:</p>
       <input type="number" id="numQuestionsInput" />
       <label for="timerInput" class="timeinput">Timer (minutes):</label>
-      <input type="number" id="timerInput"  class="timeinput" min="1" required>
+      <input type="number" id="timerInput" class="timeinput" min="1" required />
       <button onclick="startQuiz()">Start Quiz</button>
     </div>
     <div class="content" id="content">
       <div class="title-bar">
-        
         <div class="user-profile">
-          <img src="/img/user.png" alt="">
+          <img src="/img/user.png" alt="" />
         </div>
         <div class="app-name">
           <h1>Catalyst</h1>
@@ -59,11 +62,21 @@
             </div>
             <div class="right-card-upload-img">
               <label for="uploadInput" class="upload-btn" id="selectPhotoBtn">
-                <input type="file" id="photoInput" accept="image/*" style="display: none;">
-                <img id="upload-placeholder" src="img/upload-bw.png" alt="Click to Upload Image" srcset="">
-                <p id="uploadInputText">Click to Upload Answer Script</p>
-            </label>
-        
+                <input
+                  type="file"
+                  id="photoInput"
+                  accept="image/*"
+                  style="display: none"
+                />
+                <img
+                  id="upload-placeholder"
+                  src="img/upload-bw.png"
+                  alt="Click to Upload Image"
+                  srcset=""
+                />
+                <p id="uploadInputText-PC">Click to Upload Answer Script</p>
+                <p id="uploadInputText-M">Tap to Upload Answer Script</p>
+              </label>
             </div>
           </div>
         </div>
