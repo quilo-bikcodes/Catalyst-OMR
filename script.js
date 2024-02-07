@@ -309,4 +309,28 @@ function initializeQuiz(numQuestions) {
   handleOrientationAlert();
   window.addEventListener("orientationchange", handleOrientationAlert);
   window.addEventListener("resize", handleOrientationAlert);
+
+  const selectPhotoBtn = document.getElementById("selectPhotoBtn");
+  const photoInput = document.getElementById("photoInput");
+
+  selectPhotoBtn.addEventListener("click", function () {
+    photoInput.click();
+  });
+  const uploadedPic = document.getElementById("upload-placeholder");
+  const uploadInputText = document.getElementById("uploadInputText");
+
+  photoInput.addEventListener("change", function () {
+    // Handle selected photo
+    const selectedPhoto = photoInput.files[0];
+
+    if (selectedPhoto) {
+      const photoURL = URL.createObjectURL(selectedPhoto);
+      console.log("Selected photo:", selectedPhoto.name);
+      uploadedPic.src = photoURL;
+      uploadedPic.style.filter = 'invert(0%)';
+      uploadInputText.innerText="File Saved \nTap again to Reupload";
+
+    }
+    
+  });
 }
